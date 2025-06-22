@@ -1,0 +1,41 @@
+import java.util.*;
+
+class TrieNode {
+    Map<Character, TrieNode> children = new HashMap<>();
+    List<String> productList = new ArrayList<>();
+}
+
+class ProductSearch {
+    private TrieNode root = new TrieNode();
+
+    public void insert(String product) {
+        TrieNode node = root;
+        for (char c : product.toLowerCase().toCharArray()) {
+            node.children.putIfAbsent(c, new TrieNode());
+            node = node.children.get(c);
+            if (!node.productList.contains(product)) {
+                node.productList.add(product);
+            }
+        }
+    }
+
+    public List<String> search(String prefix) {
+        TrieNode node = root;
+        for (char c : prefix.toLowerCase().toCharArray()) {
+            if (!node.children.containsKey(c)) return Collections.emptyList();
+            node = node.children.get(c);
+        }
+        return node.productList;
+    }
+
+    public static void main(String[] args) {
+        ProductSearch search = new ProductSearch();
+        search.insert("iPhone");
+        search.insert("iPad");
+        search.insert("iMac");
+        search.insert("AirPods");
+
+        System.out.println(search.search("i"));    // [iPhone, iPad, iMac]
+        System.out.println(search.search("ip"));   // [iPhone, iPad]
+    }
+}
