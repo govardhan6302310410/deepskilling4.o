@@ -1,9 +1,0 @@
-Loading configuration...
-[2025-06-22 10:36:41] ???? App started
-[2025-06-22 10:36:41] App Name: SingletonDemoApp
-[2025-06-22 10:36:41] Version: 1.0.3
-â?? User 'john_doe' logged in
-[Audit 10:36:41] User: john_doe | Action: Viewed Dashboard
-[Audit 10:36:41] User: john_doe | Action: Downloaded Report
-???? User 'john_doe' logged out
-[2025-06-22 10:36:41] ???? App shutdown
