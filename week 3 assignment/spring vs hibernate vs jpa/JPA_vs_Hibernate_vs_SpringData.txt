@@ -1,0 +1,13 @@
+# Difference between JPA, Hibernate, Spring Data JPA
+
+- **JPA** is a specification (standard).
+  - Needs manual EntityManager.
+  - You control transactions, persistence manually.
+
+- **Hibernate** is an implementation of JPA.
+  - Offers more advanced features like caching, native queries.
+  - Uses Session instead of EntityManager.
+
+- **Spring Data JPA** is a framework built on top of JPA.
+  - Auto-generates repositories (CRUD) using interfaces.
+  - Less boilerplate, integrates with Spring Boot easily.
