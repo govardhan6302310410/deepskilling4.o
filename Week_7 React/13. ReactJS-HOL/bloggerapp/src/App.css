@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.section {
+  border-left: 3px solid green;
+  padding: 20px;
+  width: 30%;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+h3, h4, p {
+  margin: 5px 0;
+}
